@@ -10,7 +10,7 @@ module Fastlane
         class LoadlyAction < Action
 
             UPLOAD_URL = "https://api.loadly.io/apiv2/app/upload"
-            LOADLY_FILE_LINK = "https://i.loadly.io"
+            LOADLY_FILE_LINK = "https://loadly.io"
 
             def self.run(options)
                 Actions.verify_gem!('rest-client')
@@ -32,6 +32,7 @@ module Fastlane
                     _api_key: options[:api_key],
                     buildPassword: options[:build_password],
                     buildUpdateDescription: options[:build_description],
+                    buildChannelShortcut: options[:build_channel]
                     file: File.new(options[:file], 'rb'),
                 }
 
