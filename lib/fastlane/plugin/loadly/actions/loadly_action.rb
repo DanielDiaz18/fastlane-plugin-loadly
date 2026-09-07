@@ -32,7 +32,7 @@ module Fastlane
                     _api_key: options[:api_key],
                     buildPassword: options[:build_password],
                     buildUpdateDescription: options[:build_description],
-                    buildChannelShortcut: options[:build_channel]
+                    buildChannelShortcut: options[:build_channel],
                     file: File.new(options[:file], 'rb'),
                 }
 
